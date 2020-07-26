@@ -1,0 +1,24 @@
+.about-museum__title,
+.about-museum__description {
+    text-align: center;
+}
+
+.about-museum__image__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about-museum__signature {
+    text-align: center;
+}
+
+.about-museum__info {
+    text-decoration: none;
+    color: rgb(214, 168, 40);
+
+    transition: 0.1s ease-out;
+
+    &:hover {
+        color: rgb(97, 97, 97);
+    }
+}

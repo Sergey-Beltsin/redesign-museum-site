@@ -1,0 +1,38 @@
+@import "../mixins.scss";
+
+.main-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.main-nav__logo {
+    display: flex;
+}
+
+.main-nav__list {
+    @include reset-list;
+
+    width: 100%;
+}
+
+.main-nav__item {
+    text-transform: uppercase;
+}
+
+.main-nav__item a {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 3px;
+
+    text-decoration: none;
+    color: #111111;
+
+    transition: 0.1s ease-out;
+
+    &:hover {
+        color: #ffffff;
+        background-color: rgba(26, 76, 150, 0.5);
+    }
+}

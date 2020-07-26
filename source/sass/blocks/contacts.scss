@@ -1,0 +1,63 @@
+@import "../mixins.scss";
+
+.contacts__main-wrapper {
+    margin: 0 auto;
+
+    background-color: #222222;
+}
+
+.contacts__wrapper {
+    width: 75%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contacts__phone,
+.contacts__email {
+    text-decoration: none;
+    color: #aaaaaa;
+
+    transition: 0.1s ease-out;
+
+    &:hover {
+        color: rgb(214, 168, 40);
+    }
+}
+
+.contacts__phone {
+    margin-right: 10%;
+}
+
+.contacts__social__list {
+    @include reset-list;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 20px;
+}
+
+.contacts__social__item {
+    &:first-child {
+        margin-right: 20px;
+    }
+}
+
+.contacts__logo {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contacts__address,
+.contacts__time {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
