@@ -1,6 +1,35 @@
+@font-face {
+    font-weight: normal;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-display: swap;
+
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-display: swap;
+
+    src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-weight: bold;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-display: swap;
+    
+    src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+}
+
 body {
     padding: 0;
     margin: 0;
 
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }

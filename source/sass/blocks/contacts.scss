@@ -44,23 +44,13 @@
 
 .contacts__social__item {
     &:first-child {
-        margin-right: 20px;
+        margin-right: 5%;
     }
 }
 
 .contacts__icons {
     position: relative;
     top: 10px;
-}
-
-@keyframes change_fill {
-    0% {
-        fill: #aaaaaa;
-    }
-
-    100% {
-        fill: #f8b332;
-    }
 }
 
 #icon-phone,
@@ -72,6 +62,21 @@
     transition: fill 0.2s;
 
     .contacts__phone:hover & {
+        path {
+            fill: #f8b332;
+        }
+    }
+}
+
+#icon-vk,
+#icon-fb {
+    path {
+        fill: #aaaaaa;
+    }
+
+    transition: fill 0.2s;
+    
+    &:hover {
         path {
             fill: #f8b332;
         }
