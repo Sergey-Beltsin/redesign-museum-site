@@ -131,14 +131,12 @@
             </section>
 
             <nav class="main-nav">
-                <div class="main-nav__wrapper">
-                    <div class="main-nav__toggle__wrapper">
-                        <button class="main-nav__toggle" type="button"><span></span></button>
-                    </div>
+                <div class="main-nav__wrapper main-nav--nojs">
+                    <button class="main-nav__toggle" type="button"><span></span></button>
                     <div class="main-nav__list__wrapper">
                         <ul class="main-nav__list">
                             <li class="main-nav__item">
-                                <a href="#" class="main-nav__item__link main-nav__item__link--first">Главная</a>
+                                <a href="#" class="main-nav__item__link main-nav__item__link--first main-nav__item__link--active">Главная</a>
                             </li>
                             <li class="main-nav__item">
                                 <a href="#" class="main-nav__item__link">Афиша</a>
@@ -181,5 +179,7 @@
             <h2 class="news__title">Новости музея</h2>
         </section>
     </main>
+
+    <script src="js/header-menu.js"></script>
 </body>
 </html>

@@ -1,21 +1,106 @@
 @import "../mixins.scss";
 
 .main-nav {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin-top: 31px;
+
     background-color: #333333;
 }
 
 .main-nav__wrapper {
     width: 95%;
     margin: 0 auto;
+
+    position: relative;
 }
 
 .main-nav__logo {
     display: flex;
 }
 
-.main-nav__toggle__wrapper {
+.main-nav__toggle {
+    width: 45px;
+    height: 35px;
+    display: inline-block;
+    
+    position: absolute;
+    right: 0;
+    top: -55px;
+
+    cursor: pointer;
+
+    background-color: rgb(248, 179, 50);
+    border: none;
+
+    transition: 0.1s ease-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.main-nav__toggle span {
+    width: 22px;
+    height: 2px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 0px;
+    left: 3px;
+    border-radius: 1px;
+
+    background-color: #ffffff;
+
+    transition: background 0.2s ease-out;
+
+    &::after,
+    &::before {
+        content: " ";
+
+        width: 22px;
+        height: 2px;
+
+        position: absolute;
+        left: 0;
+        
+        border-radius: 1px;
+
+        background-color: #ffffff;
+
+        transition: top 0.3s 0.4s, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &::after {
+        top: -6px;
+    }
+
+    &::before {
+        top: 6px;
+    }
+}
+
+.main-nav--active .main-nav__toggle {
+    & span {
+        background: 0 0;
+
+        &::after {
+            top: 0;
+            transform: rotate(45deg);
+        }
+    
+        &::before {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        &::after,
+        &::before {
+            transition: top 0.3s, transform 0.3s 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
 }
 
 .main-nav__list {
@@ -25,9 +110,18 @@
 }
 
 .main-nav__list__wrapper {
+    position: relative;
+    top: 0;
+
     background-color: rgb(248, 179, 50);
     border: solid 1px #ffffff;
     border-radius: 4px;
+
+    transition: top 1s ease-out;
+}
+
+.main-nav--active .main-nav__list__wrapper {
+    top: -500px;
 }
 
 .main-nav__item {
@@ -52,6 +146,10 @@
     &:hover {
         color: #ffffff;
         background-color: rgb(224, 150, 12);
+    }
+
+    &--link:hover {
+        background-color: rgb(248, 179, 50);
     }
 
     &--first {

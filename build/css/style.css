@@ -30,18 +30,69 @@ body {
   background-color: #fafafa; }
 
 .main-nav {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  margin-top: 31px;
   background-color: #333333; }
 
 .main-nav__wrapper {
   width: 95%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .main-nav__logo {
   display: flex; }
 
-.main-nav__toggle__wrapper {
+.main-nav__toggle {
+  width: 45px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: -55px;
+  cursor: pointer;
+  background-color: #f8b332;
+  border: none;
+  transition: 0.1s ease-out; }
+  .main-nav__toggle:hover {
+    opacity: 0.7; }
+
+.main-nav__toggle span {
+  width: 22px;
+  height: 2px;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  left: 3px;
+  border-radius: 1px;
+  background-color: #ffffff;
+  transition: background 0.2s ease-out; }
+  .main-nav__toggle span::after, .main-nav__toggle span::before {
+    content: " ";
+    width: 22px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    border-radius: 1px;
+    background-color: #ffffff;
+    transition: top 0.3s 0.4s, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+  .main-nav__toggle span::after {
+    top: -6px; }
+  .main-nav__toggle span::before {
+    top: 6px; }
+
+.main-nav--active .main-nav__toggle span {
+  background: 0 0; }
+  .main-nav--active .main-nav__toggle span::after {
+    top: 0;
+    transform: rotate(45deg); }
+  .main-nav--active .main-nav__toggle span::before {
+    top: 0;
+    transform: rotate(-45deg); }
+  .main-nav--active .main-nav__toggle span::after, .main-nav--active .main-nav__toggle span::before {
+    transition: top 0.3s, transform 0.3s 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
 
 .main-nav__list {
   padding: 0;
@@ -50,9 +101,15 @@ body {
   width: 100%; }
 
 .main-nav__list__wrapper {
+  position: relative;
+  top: 0;
   background-color: #f8b332;
   border: solid 1px #ffffff;
-  border-radius: 4px; }
+  border-radius: 4px;
+  transition: top 1s ease-out; }
+
+.main-nav--active .main-nav__list__wrapper {
+  top: -500px; }
 
 .main-nav__item {
   text-transform: uppercase;
@@ -70,6 +127,8 @@ body {
   .main-nav__item__link:hover {
     color: #ffffff;
     background-color: #e0960c; }
+  .main-nav__item__link--link:hover {
+    background-color: #f8b332; }
   .main-nav__item__link--first {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
