@@ -52,10 +52,10 @@ body {
 .contacts__email {
   text-decoration: none;
   color: #aaaaaa;
-  transition: 0.1s ease-out; }
+  transition: 0.2s ease-out; }
   .contacts__phone:hover,
   .contacts__email:hover {
-    color: #d6a828; }
+    color: #f8b332; }
 
 .contacts__phone {
   margin-right: 10%; }
@@ -70,6 +70,32 @@ body {
 
 .contacts__social__item:first-child {
   margin-right: 20px; }
+
+.contacts__icons {
+  position: relative;
+  top: 10px; }
+
+@-webkit-keyframes change_fill {
+  0% {
+    fill: #aaaaaa; }
+  100% {
+    fill: #f8b332; } }
+
+@keyframes change_fill {
+  0% {
+    fill: #aaaaaa; }
+  100% {
+    fill: #f8b332; } }
+
+#icon-phone,
+#icon-post_office {
+  transition: fill 0.2s; }
+  #icon-phone path,
+  #icon-post_office path {
+    fill: #aaaaaa; }
+  .contacts__phone:hover #icon-phone path, .contacts__phone:hover
+  #icon-post_office path {
+    fill: #f8b332; }
 
 .contacts__logo {
   margin-top: 20px;

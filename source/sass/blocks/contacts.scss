@@ -23,10 +23,10 @@
     text-decoration: none;
     color: #aaaaaa;
 
-    transition: 0.1s ease-out;
+    transition: 0.2s ease-out;
 
     &:hover {
-        color: rgb(214, 168, 40);
+        color: #f8b332;
     }
 }
 
@@ -45,6 +45,36 @@
 .contacts__social__item {
     &:first-child {
         margin-right: 20px;
+    }
+}
+
+.contacts__icons {
+    position: relative;
+    top: 10px;
+}
+
+@keyframes change_fill {
+    0% {
+        fill: #aaaaaa;
+    }
+
+    100% {
+        fill: #f8b332;
+    }
+}
+
+#icon-phone,
+#icon-post_office {
+    path {
+        fill: #aaaaaa;
+    }
+
+    transition: fill 0.2s;
+
+    .contacts__phone:hover & {
+        path {
+            fill: #f8b332;
+        }
     }
 }
 
