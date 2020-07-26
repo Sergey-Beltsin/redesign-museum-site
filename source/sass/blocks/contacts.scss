@@ -90,6 +90,35 @@
     justify-content: center;
 }
 
+.contacts__circles {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -75px;
+}
+
+.contacts__icons--destination {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#icon-destination,
+#icon-clock {
+    path {
+        fill: #ffffff;
+    }
+
+    polygon {
+        fill: #ffffff;
+    }
+}
+
+.contacts__icons--clock {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
 .contacts__address,
 .contacts__time {
     display: flex;
