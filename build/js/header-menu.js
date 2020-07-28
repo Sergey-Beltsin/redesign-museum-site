@@ -1,12 +1,8 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
-
-navMain.classList.remove('main-nav--nojs');
-
-navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--active')) {
-        navMain.classList.remove('main-nav--active');
-    } else {
-            navMain.classList.add('main-nav--active');
-    }
-});
+(function(){
+    var burger = document.querySelector('.burger-container'),
+        header = document.querySelector('.header');
+    
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened');
+    };
+}());
