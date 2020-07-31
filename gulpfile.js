@@ -104,6 +104,15 @@ gulp.task('html', function () {
         .pipe(gulp.dest('build'));
 });
 
+gulp.task('htmlimages', function () {
+    return gulp.src('source/*.html')
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(rename('index.include.html'))
+        .pipe(gulp.dest('source'));
+});
+
 
 // Build
 
@@ -128,6 +137,7 @@ gulp.task('build', gulp.series(
     'sprite',
     'images',
     'html',
+    'htmlimages',
     'minify',
     'minify-css',
     'minify-js'
