@@ -275,6 +275,11 @@ body {
   text-align: center;
   margin: 0; }
 
+.about-museum__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 32px; }
+
 .about-museum__image__wrapper {
   display: flex;
   justify-content: center; }
@@ -299,4 +304,67 @@ body {
   top: 13px; }
 
 .news {
-  height: 1000px; }
+  width: 85%;
+  margin: 0 auto; }
+
+.news__main-title {
+  text-align: center;
+  font-size: 32px; }
+
+.news__main-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+.news__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 33%;
+  padding-right: 20px; }
+  .news__wrapper:last-child {
+    padding-right: 0; }
+
+.news__link:hover .news__image {
+  opacity: 0.6; }
+
+.news__link:hover .news__title {
+  opacity: 0.6; }
+
+.news__link__wrapper {
+  height: 200px; }
+
+.news__image {
+  display: block;
+  margin: 0 auto;
+  transition: 0.2s ease-out; }
+  .news__image:hover {
+    opacity: 0.6; }
+
+.news__image:hover .news__title:hover {
+  opacity: 0.7; }
+
+.news__title {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #000000; }
+  .news__title:hover {
+    opacity: 0.7; }
+
+.news__description {
+  padding: 0 10px;
+  text-align: center; }
+
+.main-slider__wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+.main-slider__buttons__wrapper {
+  display: flex;
+  justify-content: center; }
