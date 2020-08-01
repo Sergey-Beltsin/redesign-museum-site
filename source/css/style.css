@@ -32,14 +32,21 @@ body {
 .main-nav {
   display: block;
   overflow: hidden;
-  position: relative;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
   z-index: 1;
   height: 50px;
   width: 100%;
-  margin-top: 31px;
   background-color: rgba(51, 51, 51, 0.8);
   transition: padding 0.5s ease-out, background 0.7s ease-out;
   transition-delay: 0.2s; }
+
+.main-nav--opened {
+  padding-bottom: 100%;
+  transition: padding 0.5s ease-in, background 0.7s ease-in;
+  background-color: #111111;
+  transition-delay: 0.25s; }
 
 .main-nav__wrapper {
   width: 95%;
@@ -163,19 +170,6 @@ body {
     transition-delay: 0.62s; }
   .main-nav--active .main-nav__list__wrapper .main-nav__list .main-nav__item:nth-child(7) {
     transition-delay: 0.69s; }
-
-.main-nav--opened {
-  padding-bottom: 30%;
-  transition: padding 0.5s ease-in, background 0.7s ease-in;
-  background-color: #111111;
-  transition-delay: 0.25s; }
-
-.main-nav--scrolled {
-  margin-top: 0;
-  position: fixed;
-  top: 0; }
-  .main-nav--scrolled-active {
-    padding-bottom: 100%; }
 
 body {
   margin: 0;

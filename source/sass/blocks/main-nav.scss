@@ -7,17 +7,28 @@
     display: block;
     overflow: hidden;
 
-    position: relative;
+    margin-top: 0;
+
+    position: fixed;
+    top: 0;
     z-index: 1;
 
     height: 50px;
     width: 100%;
-    margin-top: 31px;
     
     background-color: rgba(51, 51, 51, 0.8);
 
     transition: padding 0.5s ease-out, background 0.7s ease-out;
     transition-delay: 0.2s;
+}
+
+.main-nav--opened {
+    // height: 100%;
+    padding-bottom: 100%;
+    
+    transition: padding 0.5s ease-in, background 0.7s ease-in;
+    background-color: rgb(17, 17, 17);
+    transition-delay: 0.25s;
 }
 
 .main-nav__wrapper {
@@ -197,26 +208,6 @@
         &:nth-child(#{$i}) {
             transition-delay: #{0.07 * $i+0.2}s;
         }
-    }
-}
-
-.main-nav--opened {
-    // height: 100%;
-    padding-bottom: 30%;
-    
-    transition: padding 0.5s ease-in, background 0.7s ease-in;
-    background-color: rgb(17, 17, 17);
-    transition-delay: 0.25s;
-}
-
-.main-nav--scrolled {
-    margin-top: 0;
-
-    position: fixed;
-    top: 0;
-
-    &-active {
-        padding-bottom: 100%;
     }
 }
 
