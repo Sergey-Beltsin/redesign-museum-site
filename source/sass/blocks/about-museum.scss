@@ -1,6 +1,17 @@
+.about-museum {
+    background-color: rgb(255, 255, 255);
+}
+
+.about-museum__wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
 .about-museum__title,
 .about-museum__description {
     text-align: center;
+
+    margin: 0;
 }
 
 .about-museum__image__wrapper {
@@ -12,6 +23,13 @@
     text-align: center;
 }
 
+.about-museum__info__wrapper {
+    display: block;
+    margin-top: -10px;
+
+    text-align: right;
+}
+
 .about-museum__info {
     text-decoration: none;
     color: rgb(214, 168, 40);
@@ -21,4 +39,9 @@
     &:hover {
         color: rgb(97, 97, 97);
     }
+}
+
+.about-museum__arrow {
+    position: relative;
+    top: 13px;
 }

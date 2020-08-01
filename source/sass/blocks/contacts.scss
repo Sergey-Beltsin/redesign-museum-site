@@ -49,46 +49,71 @@
     }
 }
 
+.contacts__social__link {
+    text-decoration: none;
+    color: #aaaaaa;
+
+    transition: 0.2s ease-out;
+
+    &:hover {
+        color: #f8b332;
+    }
+}
+
 .contacts__icons {
     position: relative;
     top: 10px;
 }
 
-#icon-phone,
-#icon-post_office {
-    path {
-        fill: #aaaaaa;
-    }
+// #icon-phone,
+// #icon-post_office {
+//     position: relative;
+//     path {
+//         fill: rgb(170, 170, 170);
+//     }
 
-    transition: fill 0.2s;
+//     transition: fill 0.2s ease-out;
+// }
 
-    .contacts__phone:hover & {
-        path {
-            fill: #f8b332;
-        }
-    }
-}
+// .contacts__phone:hover #icon-phone,
+// .contacts__phone:hover #icon-post_office {
+//     path {
+//         fill: rgb(248, 179, 50);
+//     }
+// }
 
-#icon-vk,
-#icon-fb {
-    path {
-        fill: #aaaaaa;
-    }
+// #icon-vk,
+// #icon-fb {
+//     position: relative;
+//     path {
+//         fill: rgb(170, 170, 170);
+//     }
 
-    transition: fill 0.2s;
+//     transition: all 0.2s;
     
+//     &:hover {
+//         path {
+//             fill: rgb(248, 179, 50);
+//         }
+//     }
+// }
+
+#icon-vk {
+    path {
+        color: #aaaaaa;
+    }
+
     &:hover {
-        path {
-            fill: #f8b332;
-        }
+        color: #f8b332;
     }
 }
 
 .contacts__logo {
-    margin-top: 20px;
+    width: 65%;
 
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
 }
 
 .contacts__circles {
@@ -121,8 +146,12 @@
 }
 
 .contacts__address,
-.contacts__time {
+.contacts__clock {
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.contacts__clock {
+    padding-bottom: 25px;
 }
