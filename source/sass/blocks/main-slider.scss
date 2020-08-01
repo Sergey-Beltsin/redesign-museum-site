@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .main-slider__wrapper {
     width: 100%;
     margin: 0 auto;
@@ -6,4 +8,10 @@
 .main-slider__buttons__wrapper {
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+    .main-slider {
+        position: relative;
+    }
 }

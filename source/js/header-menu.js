@@ -18,6 +18,18 @@ btn.addEventListener('click', () => {
     }
 });
 
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        document.body.style.overflow = 'auto';
+        menu.style.visibility = 'visible';
+    } else if (mainNav.classList.contains('main-nav--opened' && window.innerWidth < 768)) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        menu.style.visibility = 'hidden';
+    }
+});
+
+
 // window.addEventListener('scroll', () => {
 //     if (window.scrollY > 600) {
 //         mainNav.classList.add('main-nav--scrolled');

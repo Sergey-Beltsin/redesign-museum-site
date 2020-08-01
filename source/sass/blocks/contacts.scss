@@ -1,10 +1,16 @@
 @import "../mixins.scss";
+@import "../variables.scss";
 
 .contacts__main-wrapper {
     margin: 0 auto;
     padding-top: 50px;
 
     background-color: #222222;
+}
+
+.contacts__tech-wrapper {
+    width: 95%;
+    margin: 0 auto;
 }
 
 .contacts__wrapper {
@@ -39,6 +45,7 @@
     @include reset-list;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     padding-bottom: 20px;
 }
@@ -154,4 +161,59 @@
 
 .contacts__clock {
     padding-bottom: 25px;
+}
+
+.contacts__address br {
+    display: none;
+}
+
+@media (min-width: $tablet-width) {
+    .contacts__main-wrapper {
+        padding-top: 0;
+    }
+
+    .contacts__tech-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contacts__wrapper {
+        width: 500px;
+        margin: 0;
+    }
+
+    .contacts__social__list {
+        position: relative;
+        top: 12px;
+    }
+
+    .contacts__social__item {
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+
+    .contacts__user-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contacts__location,
+    .contacts__time {
+        display: flex;
+        align-items: center;
+    }
+
+    .contacts__address br {
+        display: block;
+    }
+
+    .contacts__address,
+    .contacts__clock {
+        text-align: left;
+    }
+
+    .contacts__clock {
+        padding-bottom: 0;
+    }
 }

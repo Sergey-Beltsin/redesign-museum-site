@@ -400,3 +400,40 @@
 //     }
 // }
 
+@media (min-width: $tablet-width) {
+    .main-nav {
+        position: absolute;
+        background-color: rgba(51, 51, 51, 0.3);
+    }
+
+    .main-nav__list__wrapper {
+        width: 95%;
+        margin: 0 auto;
+
+        visibility: visible;
+    }
+
+    .main-nav__toggle__wrapper {
+        display: none;
+    }
+
+    .main-nav__list {
+        display: flex;
+        justify-content: space-between;
+
+        position: absolute;
+        top: 45px;
+    }
+
+    .main-nav__item {
+        opacity: 1;
+    }
+
+    .main-nav__item__link {
+        width: 100%;
+        padding: 0;
+
+        font-size: 16px;
+        border-bottom: none;
+    }
+}
