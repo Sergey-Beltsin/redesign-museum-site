@@ -1,11 +1,23 @@
 @import "../mixins.scss";
+@import "../variables.scss";
 
 .main-nav {
-    padding-top: 70px;
-    padding-bottom: 20px;
-    margin-top: 31px;
+    // padding-top: 70px;
+    // padding-bottom: 20px;
+    display: block;
+    overflow: hidden;
 
-    background-color: #333333;
+    position: relative;
+    z-index: 1;
+
+    height: 50px;
+    width: 100%;
+    margin-top: 31px;
+    
+    background-color: rgba(51, 51, 51, 0.8);
+
+    transition: padding 0.5s ease-out, background 0.7s ease-out;
+    transition-delay: 0.2s;
 }
 
 .main-nav__wrapper {
@@ -19,18 +31,27 @@
     display: flex;
 }
 
+.main-nav__toggle__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .main-nav__toggle {
     width: 45px;
     height: 35px;
-    display: inline-block;
+
+    position: relative;
+    top: 6px;
     
-    position: absolute;
-    right: 0;
-    top: -55px;
+    // position: absolute;
+    // right: 0;
+    // top: 7px;
 
     cursor: pointer;
 
-    background-color: rgb(248, 179, 50);
+    // background-color: rgb(248, 179, 50);
+    background-color: transparent;
     border: none;
 
     transition: 0.1s ease-out;
@@ -111,55 +132,91 @@
 
 .main-nav__list__wrapper {
     position: relative;
-    top: 0;
+    visibility: hidden;
+    // top: 0;
 
-    background-color: rgb(248, 179, 50);
-    border: solid 1px #ffffff;
-    border-radius: 4px;
+    // background-color: rgb(248, 179, 50);
+    // border: solid 1px #ffffff;
+    // border-radius: 4px;
+    opacity: 1;
 
-    transition: top 1s ease-out;
-}
-
-.main-nav--active .main-nav__list__wrapper {
-    top: -500px;
+    transition: all 1s ease-out;
 }
 
 .main-nav__item {
-    text-transform: uppercase;
-    border-top: solid 1px #ffffff;
-
-    &:first-child {
-        border-top: none;
+    text-align: right;
+    
+    @for $i from 1 through $menuItems {
+        &:nth-child(#{$i}) {
+            transition-delay: #{0.56 - ($i * 0.07)}s;
+        }
     }
+    transform: scale(1.15) translateY(-30px);
+    opacity: 0;
+    transition: transform 0.5s $cubic, opacity 0.6s $cubic;
 }
 
 .main-nav__item__link {
     display: block;
-    padding: 10px;
+    // padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 20px;
 
     text-decoration: none;
+    font-size: 20px;
     color: #ffffff;
-    font-weight: bold;
+    border-bottom: solid 1px rgba(133, 133, 133, 0.514);
 
     transition: 0.1s ease-out;
 
     &:hover {
-        color: #ffffff;
-        background-color: rgb(224, 150, 12);
+        // color: #ffffff;
+        // background-color: rgb(224, 150, 12);
     }
 
-    &--link:hover {
-        background-color: rgb(248, 179, 50);
-    }
+    // &--link:hover {
+    //     background-color: rgb(248, 179, 50);
+    // }
 
-    &--first {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-    }
+    // &--first {
+    //     border-top-left-radius: 4px;
+    //     border-top-right-radius: 4px;
+    // }
 
-    &--last {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
+    // &--last {
+    //     border-bottom-left-radius: 4px;
+    //     border-bottom-right-radius: 4px;
+    // }
+}
+
+.main-nav--active .main-nav__list__wrapper .main-nav__list .main-nav__item {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    @for $i from 1 through $menuItems {
+        &:nth-child(#{$i}) {
+            transition-delay: #{0.07 * $i+0.2}s;
+        }
+    }
+}
+
+.main-nav--opened {
+    // height: 100%;
+    padding-bottom: 30%;
+    
+    transition: padding 0.5s ease-in, background 0.7s ease-in;
+    background-color: rgb(17, 17, 17);
+    transition-delay: 0.25s;
+}
+
+.main-nav--scrolled {
+    margin-top: 0;
+
+    position: fixed;
+    top: 0;
+
+    &-active {
+        padding-bottom: 100%;
     }
 }
 
@@ -177,15 +234,14 @@ body {
 .window {
     position: relative;
     display: block;
-    width: 360px;
     height: 567px;
     margin: 100px auto 0;
-    box-shadow: 0 0 65px 15px rgba(#000, 0.2);
     overflow: hidden;
     border-radius: 3px;
     background: #F1F1F1;
     .header {
         display: block;
+        position: relative;
         height: 50px;
         width: 100%;
         background: rgba(34, 34, 34, 0.808);
@@ -194,7 +250,8 @@ body {
         transition-delay: 0.2s;
         z-index: 1;
         .burger-container {
-            position: relative;
+            position: absolute;
+            right: 0;
             display: inline-block;
             height: 50px;
             width: 50px;
@@ -240,7 +297,7 @@ body {
             left: 50%;
             transform: translateX(-50%);
             &.icon-bag {
-                right: 0;
+                left: 0;
                 top: 0;
                 left: auto;
                 transform: translateX(0px);
