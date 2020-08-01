@@ -18,7 +18,7 @@
             <section class="contacts">
                 <div class="contacts__main-wrapper">
                     <div class="contacts__wrapper">
-                        <a href="#" class="contacts__phone">
+                        <a href="tel:8(81836)6-3066" class="contacts__phone">
                             <svg width="25" height="30" class="contacts__icons">
                                 <use xlink:href="#icon-phone"></use>
                             </svg>
@@ -116,11 +116,22 @@
         </div>
     </header>
 
-    <main class="main-page">
+    <main class="page-main">
 
         <section class="main-slider">
             <div class="main-slider__wrapper">
-
+                <div class="main-slider__slides">
+                    <img src="img/main-photo1.jpg" alt="Музей" class="main-slider__img" width="100%">
+                    <!-- <img src="img/main-photo2.jpg" alt="Музей" class="main-slider__img" width="100%">
+                    <img src="img/main-photo3.jpg" alt="Музей" class="main-slider__img" width="100%">
+                    <img src="img/main-photo4.jpg" alt="Музей" class="main-slider__img" width="100%"> -->
+                </div>
+                <div class="main-slider__buttons__wrapper">
+                    <button class="main-slider__buttons" type="button"></button>
+                    <button class="main-slider__buttons" type="button"></button>
+                    <button class="main-slider__buttons" type="button"></button>
+                    <button class="main-slider__buttons" type="button"></button>
+                </div>
             </div>
         </section>
 
@@ -137,16 +148,74 @@
                     </a>
                 </div>
                 <div class="about-museum__image__wrapper">
-                    <img src="img/Kulakov-portret.jpg" alt="Портрет Василия     Феоктистовича Кулакова" width="200" class="about-museum__image">
+                    <img src="img/Kulakov-portret.jpg" alt="Портрет Василия     Феоктистовича Кулакова" width="200" height="320" class="about-museum__image">
                 </div>
                 <p class="about-museum__signature">В.Ф. Кулаков</p>
             </div>
         </section>
 
+        <section class="poster">
+            <div class="poster-wrapper">
+
+            </div>
+        </section>
+
         <section class="news">
-            <h2 class="news__title">Новости музея</h2>
+            <h2 class="news__main-title">Новости музея</h2>
+
+            <ul class="news__main-wrapper">
+                <li class="news__wrapper">
+                    <div class="news__link__wrapper">
+                        <a href="patriots.html" class="news__link">
+                            <img src="img/patriots_news.jpg" alt="" height="100%" class="news__image">
+                        </a>
+                    </div>
+                    <div class="news__wrapper--last">
+                        <a href="patriots.html" class="news__title">
+                            Патриоты Отечества: к 20-летию создания в г. Вельске военно-морского клуба
+                        </a>
+                        <div class="news__description">
+                            Более 80 лет в нашей стране в последнее воскресенье июля отмечается День военно-морского флота. В этом году этот день выпадает на 26 июля.
+                        </div>
+                    </div>
+                </li>
+                <li class="news__wrapper">
+                    <div class="news__link__wrapper">
+                        <a href="iosiph.html" class="news__link">
+                            <img src="img/Iosiph-home_news.png" alt="" height="100%" class="news__image">
+                        </a>
+                    </div>
+                    <div class="news__wrapper--last">
+                        <a href="iosiph.html" class="news__title">
+                            Дом-музей Иосифа Бродского: жизнь продолжается 
+                        </a>
+                        <div class="news__description">
+                            Конец июля, карантин, а Дом-музей Иосифа Бродского в деревне Норинской Коношского района продолжает жить своей жизнью, правда, пока без посетителей.
+                        </div>
+                    </div>
+                </li>
+                <li class="news__wrapper">
+                    <div class="news__link__wrapper">
+                        <a href="trade.html" class="news__link">
+                            <img src="img/tradeVelsk_news.jpg" alt="" height="100%" class="news__image">
+                        </a>
+                    </div>
+                    <div class="news__wrapper--last">
+                        <a href="trade.html" class="news__title">
+                            Чем торговали в Вельске 100 лет назад 
+                        </a>
+                        <div class="news__description">
+                            Современный человек не представляет своего существования без покупок разного рода товаров и услуг. Чем же торговали в Вельске 100 лет назад?
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
+
+    <footer class="main-footer">
+
+    </footer>
 
     <script src="js/header-menu.js"></script>
 </body>
