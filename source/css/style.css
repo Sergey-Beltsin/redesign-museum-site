@@ -171,10 +171,37 @@ body {
   .main-nav--active .main-nav__list__wrapper .main-nav__list .main-nav__item:nth-child(7) {
     transition-delay: 0.69s; }
 
+@media (min-width: 768px) {
+  .main-nav {
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.3); }
+  .main-nav__list__wrapper {
+    width: 95%;
+    margin: 0 auto;
+    visibility: visible; }
+  .main-nav__toggle__wrapper {
+    display: none; }
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 45px; }
+  .main-nav__item {
+    opacity: 1; }
+  .main-nav__item__link {
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    border-bottom: none; } }
+
 .contacts__main-wrapper {
   margin: 0 auto;
   padding-top: 50px;
   background-color: #222222; }
+
+.contacts__tech-wrapper {
+  width: 95%;
+  margin: 0 auto; }
 
 .contacts__wrapper {
   width: 75%;
@@ -203,6 +230,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-bottom: 20px; }
 
 .contacts__social__item:first-child {
@@ -262,6 +290,38 @@ body {
 
 .contacts__clock {
   padding-bottom: 25px; }
+
+.contacts__address br {
+  display: none; }
+
+@media (min-width: 768px) {
+  .contacts__main-wrapper {
+    padding-top: 0; }
+  .contacts__tech-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .contacts__wrapper {
+    width: 500px;
+    margin: 0; }
+  .contacts__social__list {
+    position: relative;
+    top: 12px; }
+  .contacts__social__item:first-child {
+    margin-right: 15px; }
+  .contacts__user-wrapper {
+    display: flex;
+    justify-content: space-evenly; }
+  .contacts__location,
+  .contacts__time {
+    display: flex;
+    align-items: center; }
+  .contacts__address br {
+    display: block; }
+  .contacts__address,
+  .contacts__clock {
+    text-align: left; }
+  .contacts__clock {
+    padding-bottom: 0; } }
 
 .about-museum {
   background-color: white; }
@@ -368,3 +428,7 @@ body {
 .main-slider__buttons__wrapper {
   display: flex;
   justify-content: center; }
+
+@media (min-width: 768px) {
+  .main-slider {
+    position: relative; } }
