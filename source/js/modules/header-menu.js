@@ -1,10 +1,11 @@
-const btn = document.querySelector('.main-nav__toggle'),
-      menu = document.querySelector('.main-nav__list__wrapper'),
-      wrapper = document.querySelector('.main-nav__wrapper'),
-      mainNav = document.querySelector('.main-nav'),
-      menuLinks = document.querySelectorAll('.main-nav__item__link');
+function headMenu() {
+    const btn = document.querySelector('.main-nav__toggle'),
+    menu = document.querySelector('.main-nav__list__wrapper'),
+    wrapper = document.querySelector('.main-nav__wrapper'),
+    mainNav = document.querySelector('.main-nav'),
+    menuLinks = document.querySelectorAll('.main-nav__item__link');
 
-btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
     if (wrapper.classList.contains('main-nav--active')) {
         wrapper.classList.remove('main-nav--active');
         mainNav.classList.remove('main-nav--opened');
@@ -16,9 +17,9 @@ btn.addEventListener('click', () => {
         document.body.style.overflow = 'hidden';
         menu.style.visibility = 'visible';
     }
-});
+    });
 
-window.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         document.body.style.overflow = 'auto';
         menu.style.visibility = 'visible';
@@ -27,7 +28,10 @@ window.addEventListener('resize', () => {
     } else {
         menu.style.visibility = 'hidden';
     }
-});
+    });
+}
+
+export default headMenu;
 
 
 // window.addEventListener('scroll', () => {

@@ -1,8 +1,13 @@
 @import "../variables.scss";
 
-.main-slider__wrapper {
+.main-slider {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.main-slider__slides {
+    margin-top: 50px;
 }
 
 .main-slider__buttons__wrapper {

@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "browserslist": [
+    "> 1%"
+  ],
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
-    "svgstore": "^3.0.0-2"
+    "svgstore": "^3.0.0-2",
+    "tiny-slider": "^2.9.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.10",
     "del": "^5.1.0",
     "gulp-autoprefixer": "^7.0.1",
