@@ -4,16 +4,23 @@
     background-color: rgb(255, 255, 255);
 }
 
-.about-museum__wrapper {
+.about-museum__main-wrapper {
+    display: flex;
+    flex-direction: column;
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.about-museum__wrapper {
+    width: 60%;
+    flex-grow: 1;
+}
+
+.about-museum__slider {}
+
 .about-museum__title,
 .about-museum__description {
-    text-align: center;
-
     margin: 0;
 }
 
@@ -35,9 +42,6 @@
 
 .about-museum__info__wrapper {
     display: block;
-    margin-top: -10px;
-
-    text-align: right;
 }
 
 .about-museum__info {
@@ -54,4 +58,14 @@
 .about-museum__arrow {
     position: relative;
     top: 13px;
+}
+
+@media (min-width: $tablet-width) {
+    .about-museum__main-wrapper {
+        flex-direction: row;
+    }
+
+    .about-museum__wrapper {
+        padding-right: 30px;
+    }
 }

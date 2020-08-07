@@ -23,7 +23,7 @@
         width: 50px;
 
         position: absolute;
-        bottom: 50%;
+        bottom: 45%;
 
         background-color: rgba(22, 22, 22, 0.2);
         border: none;
@@ -105,6 +105,35 @@
     }
 }
 
+#tns2-ow {
+    margin-top: 0;
+    // width: 70%;
+
+    & .tns-nav {
+        flex-direction: column;
+        top: 70%;
+        left: 55%;
+
+        & button {
+            margin-top: 5px;
+
+            background-color: rgba(248, 179, 50, 0.7);
+        }
+
+        & .tns-nav-active {
+            background-color: rgba(248, 179, 50, 1);
+        }
+    }
+
+    & .tns-controls {
+
+        & button[data-controls='prev'],
+        & button[data-controls='next'] {
+            bottom: 30%;
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .tns-outer {
         margin-top: -70px;
@@ -118,6 +147,24 @@
         & button[data-controls='prev'],
         & button[data-controls='next'] {
             // bottom: 300px;
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    #tns2-ow {
+        & .tns-nav {
+            left: 53%;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #tns2-ow {
+        width: 70%;
+
+        & .tns-nav {
+            top: 70%;
         }
     }
 }

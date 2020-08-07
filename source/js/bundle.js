@@ -4022,6 +4022,18 @@ window.addEventListener('DOMContentLoaded', function () {
     // navPosition: 'bottom'
 
   });
+  Object(_node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_1__["tns"])({
+    container: '.about-museum__slider',
+    items: 1,
+    slideBy: 'page',
+    axis: 'vertical',
+    autoplay: true,
+    mouseDrag: true,
+    controlsPosition: 'bottom',
+    controlsText: [' ', ' '] // prevButton: `position: absolute;`
+    // navPosition: 'bottom'
+
+  });
 });
 
 /***/ })

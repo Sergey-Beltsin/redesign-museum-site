@@ -17,4 +17,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // navPosition: 'bottom'
       });
+
+      tns({
+        container: '.about-museum__slider',
+        items: 1,
+        slideBy: 'page',
+        axis: 'vertical',
+        autoplay: true,
+        mouseDrag: true,
+
+        controlsPosition: 'bottom',
+        controlsText: [' ', ' ']
+        // prevButton: `position: absolute;`
+
+        // navPosition: 'bottom'
+      });
 });
