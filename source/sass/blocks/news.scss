@@ -2,6 +2,7 @@
 
 .news {
     width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -12,6 +13,8 @@
 
 .news__main-wrapper {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -19,10 +22,12 @@
 .news__wrapper {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    overflow: hidden;
+    // flex-grow: 1;
 
-    width: 33%;
-    padding-right: 20px;
+    width: 30%;
+    min-width: 200px;
+    margin-right: 20px;
 
     &:last-child {
         padding-right: 0;
@@ -65,7 +70,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    text-align: center;
+    // text-align: center;
     color: #000000;
 
     &:hover {
@@ -76,5 +81,5 @@
 .news__description {
     padding: 0 10px;
 
-    text-align: center;
+    // text-align: center;
 }
