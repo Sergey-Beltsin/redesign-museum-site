@@ -3,32 +3,147 @@
     margin-bottom: 150px;
 }
 
-.poster-wrapper {
+.poster__main-wrapper {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .poster__main-title {
-    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .poster__list {
-    display: flex;
     margin: 0;
     padding: 0;
 }
 
 .poster__item {
-    width: 50%;
-    max-height: 500px;
+    display: flex;
+    align-items: flex-start;
     flex-grow: 1;
+    width: 100%;
+    margin-bottom: 40px;
 
     list-style: none;
+
+    &:last-child {
+        margin-bottom: 50px;
+    }
 }
 
 .poster__image {
     display: block;
     height: 100%;
     margin: 0 auto;
+}
+
+.poster__time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 80px;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #e2b13c;
+}
+
+.poster__time {
+    display: block;
+    text-align: center;
+
+    position: relative;
+    top: -5px;
+
+    color: #ffffff;
+    font-weight: bold;
+
+    & span {
+        font-size: 40px;
+    }
+}
+
+.poster__tech-wrapper {
+    width: 100%;
+    padding: 17px;
+
+    color: #ffffff;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.poster__title {
+    margin: 0;
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.poster__title-link {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.2s ease-out;
+
+    &:hover {
+        color: #f8b332;
+    }
+}
+
+.poster__entry__phone {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.2s ease-out;
+
+    &:hover {
+        color: #f8b332;
+    }
+}
+
+.poster-to-all {
+    position: relative;
+    left: 80px;
+
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: 0.2s ease-out;
+
+    &:hover {
+        color: #f8b332;
+    }
+
+    &::before {
+        content: '';
+
+        width: 60px;
+        height: 2px;
+
+        position: absolute;
+        left: -80px;
+        top: 9px;
+
+        background-color: #e2b13c;
+    }
+
+    &::after {
+        content: '';
+
+        width: 8px;
+        height: 3px;
+        position: absolute;
+        left: -15px;
+        top: 9px;
+
+        background-color: #000000;
+    }
 }
