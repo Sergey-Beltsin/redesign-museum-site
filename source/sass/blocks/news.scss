@@ -23,14 +23,16 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    // flex-grow: 1;
+    flex-grow: 1;
 
-    width: 30%;
+    width: 100%;
     min-width: 200px;
     margin-right: 20px;
+    margin-bottom: 40px;
 
     &:last-child {
-        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -82,4 +84,16 @@
     padding: 0 10px;
 
     // text-align: center;
+}
+
+@media (min-width: 550px) {
+    .news__wrapper {
+        width: 40%;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .news__wrapper {
+        width: 30%;
+    }
 }

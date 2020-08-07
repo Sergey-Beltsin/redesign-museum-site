@@ -1,0 +1,27 @@
+@import "../variables.scss";
+    
+.social__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social__item {
+    list-style: none;
+
+    &:first-child {
+        margin-right: 15px;
+    }
+}
+
+.social__icons--vk {
+    position: relative;
+    top: 7px;
+}
+
+@media (min-width: $tablet-width) {
+    .contacts__social {
+        display: flex;
+        align-items: flex-end;
+    }
+}

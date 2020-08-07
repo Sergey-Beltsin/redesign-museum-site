@@ -1,0 +1,34 @@
+@import "../variables.scss";
+.poster {
+    margin-bottom: 150px;
+}
+
+.poster-wrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.poster__main-title {
+    text-align: center;
+}
+
+.poster__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.poster__item {
+    width: 50%;
+    max-height: 500px;
+    flex-grow: 1;
+
+    list-style: none;
+}
+
+.poster__image {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
