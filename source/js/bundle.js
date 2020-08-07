@@ -4007,6 +4007,7 @@ function headMenu() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header-menu */ "./source/js/modules/header-menu.js");
 /* harmony import */ var _node_modules_tiny_slider_src_tiny_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/tiny-slider/src/tiny-slider */ "./node_modules/tiny-slider/src/tiny-slider.js");
+ // import titlesOnSlider from './modules/main-slider';
 
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -4015,7 +4016,7 @@ window.addEventListener('DOMContentLoaded', function () {
     container: '.main-slider__slides',
     items: 1,
     slideBy: 'page',
-    autoplay: true,
+    // autoplay: true,
     mouseDrag: true,
     controlsPosition: 'bottom',
     controlsText: [' ', ' '] // prevButton: `position: absolute;`
@@ -4033,7 +4034,7 @@ window.addEventListener('DOMContentLoaded', function () {
     controlsText: [' ', ' '] // prevButton: `position: absolute;`
     // navPosition: 'bottom'
 
-  });
+  }); // titlesOnSlider();
 });
 
 /***/ })

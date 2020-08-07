@@ -1,4 +1,5 @@
 import headMenu from './modules/header-menu';
+// import titlesOnSlider from './modules/main-slider';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
         container: '.main-slider__slides',
         items: 1,
         slideBy: 'page',
-        autoplay: true,
+        // autoplay: true,
         mouseDrag: true,
 
         controlsPosition: 'bottom',
@@ -32,4 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // navPosition: 'bottom'
       });
+
+      // titlesOnSlider();
 });
