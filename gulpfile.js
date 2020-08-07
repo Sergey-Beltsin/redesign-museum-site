@@ -104,6 +104,16 @@ gulp.task('html', function () {
         .pipe(gulp.dest('build'));
 });
 
+
+gulp.task('htmlmin', function () {
+    return gulp.src('source/*.html')
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(rename('index.min.html'))
+        .pipe(gulp.dest('source'));
+});
+
 gulp.task('htmlimages', function () {
     return gulp.src('source/*.html')
         .pipe(posthtml([
@@ -137,6 +147,7 @@ gulp.task('build', gulp.series(
     'sprite',
     'images',
     'html',
+    'htmlmin',
     'htmlimages',
     'minify',
     'minify-css',
