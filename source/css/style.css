@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
 @font-face {
   font-weight: normal;
   font-family: "Open Sans";
@@ -163,11 +164,11 @@ body {
 
 /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
 .tns-outer {
-  max-width: 1920px;
+  max-width: 1280px;
   max-height: 1000px;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: -115px;
+  margin-top: -114px;
   position: relative; }
   .tns-outer button[data-action] {
     display: none; }
@@ -220,21 +221,19 @@ body {
 .tns-nav {
   display: flex;
   justify-content: space-between;
-  width: 100px;
+  width: 30%;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
-  top: 130px; }
+  z-index: 2; }
   .tns-nav button {
     width: 10px;
     height: 15px;
-    margin-right: 5px;
-    background-color: rgba(110, 110, 110, 0.6);
+    background-color: rgba(110, 110, 110, 0.5);
     border-radius: 50%;
     border: none;
     transition: 0.2s ease-out; }
   .tns-nav .tns-nav-active {
-    background-color: #383838; }
+    background-color: #1d1d1d; }
 
 #tns2-ow {
   margin-top: 0; }
@@ -263,7 +262,7 @@ body {
   .tns-outer {
     margin-top: -70px; }
   .tns-nav {
-    top: 80px; } }
+    top: 90px; } }
 
 @media (min-width: 500px) {
   #tns2-ow .tns-nav {
@@ -271,7 +270,9 @@ body {
 
 @media (min-width: 768px) {
   #tns2-ow {
-    width: 70%; } }
+    width: 70%; }
+  .tns-nav {
+    top: 130px; } }
 
 .page-header {
   background-color: #fafafa;
@@ -421,7 +422,7 @@ body {
 
 @media (min-width: 768px) {
   .main-nav {
-    max-width: 1920px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
     background-color: rgba(51, 51, 51, 0.5); }
@@ -548,11 +549,11 @@ body {
 
 #icon-destination path,
 #icon-clock path {
-  fill: #ffffff; }
+  fill: #000000; }
 
 #icon-destination polygon,
 #icon-clock polygon {
-  fill: #ffffff; }
+  fill: #000000; }
 
 .contacts__icons--clock {
   display: block;
@@ -601,7 +602,8 @@ body {
     padding-bottom: 0; } }
 
 .about-museum {
-  background-color: white; }
+  background-color: white;
+  margin-bottom: 40px; }
 
 .about-museum__main-wrapper {
   display: flex;
@@ -756,6 +758,97 @@ body {
     left: -15px;
     top: 9px;
     background-color: #000000; }
+
+.poster-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border: solid 2px #e7e7e7; }
+  .poster-item:last-child {
+    margin-bottom: 0; }
+
+.poster-item__image-wrapper {
+  display: flex;
+  position: relative; }
+
+.poster-item__wrapper {
+  padding-left: 5%; }
+
+.poster-item__image {
+  width: 100%; }
+
+.poster-item__image-time {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: linear-gradient(to right, rgba(241, 145, 0, 0.8) 0%, rgba(199, 64, 64, 0.8) 100%);
+  text-align: center;
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px; }
+  .poster-item__image-time span {
+    position: relative;
+    top: -5px;
+    margin-bottom: -15px;
+    font-weight: bold;
+    font-size: 40px; }
+
+.poster-item__title__link {
+  color: #f8b332;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-out; }
+  .poster-item__title__link:hover {
+    color: #616161; }
+
+.poster-item__place,
+.poster-item__time {
+  display: flex; }
+
+.poster-item__place span {
+  margin-left: 15px;
+  font-weight: bold; }
+
+.poster-item__place {
+  margin-bottom: 10px; }
+
+.poster-item__time span {
+  margin-left: 9px;
+  font-weight: bold; }
+
+.poster-item__time {
+  margin-bottom: 20px; }
+
+.poster-item__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 24px; }
+
+.poster-item__to-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  background-color: #616161;
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-out; }
+  .poster-item__to-all:hover {
+    background-color: #f8b332;
+    border-radius: 13px; }
 
 .news {
   width: 85%;
