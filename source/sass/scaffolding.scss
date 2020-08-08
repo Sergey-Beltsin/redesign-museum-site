@@ -25,6 +25,11 @@
     src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     padding: 0;
     margin: 0;
