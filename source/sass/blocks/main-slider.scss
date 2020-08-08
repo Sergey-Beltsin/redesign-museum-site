@@ -17,6 +17,14 @@
     justify-content: center;
 }
 
+// .main-slider__title {
+//     display: none;
+
+//     &--active {
+//         display: block;
+//     }
+// }
+
 @media (min-width: $tablet-width) {
     .main-slider {
         position: relative;

@@ -9,11 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
         container: '.main-slider__slides',
         items: 1,
         slideBy: 'page',
-        // autoplay: true,
+        autoplay: true,
         mouseDrag: true,
 
         controlsPosition: 'bottom',
-        controlsText: [' ', ' ']
+        controlsText: [' ', ' '],
         // prevButton: `position: absolute;`
 
         // navPosition: 'bottom'

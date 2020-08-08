@@ -3,11 +3,11 @@
 /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
 
 .tns-outer {
-    max-width: 1920px;
+    max-width: 1280px;
     max-height: 1000px;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: -115px;
+    margin-top: -114px;
 
     position: relative;
 
@@ -83,27 +83,38 @@
 .tns-nav {
     display: flex;
     justify-content: space-between;
-    width: 100px;
+    width: 30%;
     margin: 0 auto;
 
     position: relative;
     z-index: 2;
-    top: 130px;
 
     & button {
         width: 10px;
         height: 15px;
-        margin-right: 5px;
+        // margin-right: 5px;
 
-        background-color: rgba(110, 110, 110, 0.6);
+        background-color: rgba(110, 110, 110, 0.5);
         border-radius: 50%;
         border: none;
         transition: 0.2s ease-out;
     }
 
     & .tns-nav-active {
-        background-color: rgb(56, 56, 56);
+        background-color: rgb(29, 29, 29);
     }
+
+    // @media (min-width: 1475px) {
+    //     bottom: 75px;
+    // }
+
+    // @media (min-width: 1510px) {
+    //     bottom: 100px;
+    // }
+
+    // @media (min-width: 1550px) {
+    //     bottom: 125px;
+    // }
 }
 
 #tns2-ow {
@@ -154,7 +165,7 @@
     }
 
     .tns-nav {
-        top: 80px;
+        top: 90px;
     }
 
     .tns-controls {
@@ -166,6 +177,10 @@
 }
 
 @media (min-width: 500px) {
+    .tns-outer {
+        
+    }
+
     #tns2-ow {
         & .tns-nav {
             left: 51%;
@@ -179,5 +194,9 @@
 
         & .tns-nav {
         }
+    }
+
+    .tns-nav {
+        top: 130px;
     }
 }
