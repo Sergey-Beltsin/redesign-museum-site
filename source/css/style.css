@@ -768,6 +768,7 @@ body {
   flex-direction: column;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  position: relative;
   border: solid 2px #e7e7e7; }
   .poster-item:last-child {
     margin-bottom: 0; }
@@ -862,9 +863,13 @@ body {
   .poster-item {
     flex-direction: row; }
   .poster-item__text {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 14px; }
   .poster-item__to-all {
-    width: 60%; }
+    width: 35%;
+    position: absolute;
+    bottom: 20px; }
   .poster-item__image-time {
     width: 90px;
     height: 90px; }
@@ -895,7 +900,16 @@ body {
       margin-right: 0;
       padding-bottom: 0; }
   .poster-item__title__link {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .poster-item__image-tech-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: transparent; }
+  .poster-item__image {
+    width: 250px;
+    height: 400px; }
+  .poster-item__to-all {
+    width: 35%; } }
 
 .news {
   width: 85%;
