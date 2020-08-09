@@ -17,6 +17,10 @@
 
         cursor: pointer;
     }
+
+    &--active {
+        color: #f8b332;
+    }
 }
 
 .gallery__wrapper {
@@ -26,8 +30,33 @@
 
 .gallery__image__wrapper {
     width: 25%;
+
+    background-color: transparent;
+
+    transition: 0.2s ease-out;
+}
+
+.gallery__image__wrapper--darkened {
+    position: relative;
+    
+    background-color: transparent;
+
+    transition: 0.2s ease-out;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
 }
 
 .gallery__image {
-    
+    display: block;
 }

@@ -91,7 +91,7 @@
 
     & button {
         width: 10px;
-        height: 15px;
+        height: 13px;
         // margin-right: 5px;
 
         background-color: rgba(110, 110, 110, 0.5);
@@ -142,19 +142,42 @@
 
         & button[data-controls='prev'],
         & button[data-controls='next'] {
+            width: 40px;
+            height: 40px;
+
             bottom: 30%;
             
             transform: rotate(90deg);
         }
 
         & button[data-controls='prev'] {
-            top: 80px;
+            top: 72px;
             left: 45%;
+
+            &::before {
+                top: 13px;
+                left: 10px;
+            }
+
+            &::after {
+                bottom: 12px;
+                left: 10px;
+            }
         }
 
         & button[data-controls='next'] {
             bottom: 5px;
             left: 45%;
+
+            &::before {
+                top: 13px;
+                left: 10px;
+            }
+
+            &::after {
+                bottom: 12px;
+                left: 10px;
+            }
         }
     }
 }
