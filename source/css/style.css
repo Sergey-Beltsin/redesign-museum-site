@@ -233,7 +233,7 @@ body {
     width: 10px;
     height: 15px;
     background-color: rgba(110, 110, 110, 0.5);
-    border-radius: 50%;
+    border-radius: 10px;
     border: none;
     transition: 0.2s ease-out; }
   .tns-nav .tns-nav-active {
@@ -267,6 +267,35 @@ body {
     margin-top: -70px; }
   .tns-nav {
     top: 90px; } }
+
+@media (max-width: 500px) {
+  .tns-controls button[data-controls='prev'],
+  .tns-controls button[data-controls='next'] {
+    width: 30px;
+    height: 35px;
+    bottom: 35%; }
+    .tns-controls button[data-controls='prev']::after, .tns-controls button[data-controls='prev']::before,
+    .tns-controls button[data-controls='next']::after,
+    .tns-controls button[data-controls='next']::before {
+      width: 15px; }
+  .tns-controls button[data-controls='prev']::before {
+    top: 11px;
+    left: 7px;
+    transform: rotate(135deg); }
+  .tns-controls button[data-controls='prev']::after {
+    bottom: 11px;
+    left: 7px;
+    transform: rotate(-135deg); }
+  .tns-controls button[data-controls='next'] {
+    right: 0; }
+    .tns-controls button[data-controls='next']::before {
+      top: 11px;
+      left: 10px;
+      transform: rotate(-135deg); }
+    .tns-controls button[data-controls='next']::after {
+      bottom: 11px;
+      left: 10px;
+      transform: rotate(135deg); } }
 
 @media (min-width: 500px) {
   #tns2-ow .tns-nav {

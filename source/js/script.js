@@ -1,7 +1,5 @@
 import headMenu from './modules/header-menu';
-// import titlesOnSlider from './modules/main-slider';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
-import jquery from '../../node_modules/jquery';
 
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
