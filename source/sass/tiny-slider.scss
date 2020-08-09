@@ -118,7 +118,7 @@
 }
 
 #tns2-ow {
-    margin-top: 0;
+    margin-top: -60px;
     // width: 70%;
 
     & .tns-nav {
@@ -191,6 +191,7 @@
 @media (min-width: 768px) {
     #tns2-ow {
         width: 70%;
+        margin-top: -40px;
 
         & .tns-nav {
         }

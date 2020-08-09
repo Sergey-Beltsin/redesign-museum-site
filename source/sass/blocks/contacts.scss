@@ -69,6 +69,38 @@
     }
 }
 
+// .contacts__social__link path {
+//     fill: #aaaaaa;
+// }
+
+// .contacts__social__link:hover path {
+//     fill: #f8b332;
+// }
+
+.contacts__social__link--vk {
+    transition: 0.2s ease-out;
+
+    color: #aaaaaa;
+
+    &:hover {
+        color: #f8b332;
+    }
+}
+
+// #icon-vk {
+//     // transition: 0.2s ease-out;
+
+//     path {
+//         fill: #aaaaaa;
+//     }
+
+// //     &:hover {
+// //         path {
+// //             fill: #f8b332;
+// //         }
+// //     }
+// }
+
 .contacts__icons {
     position: relative;
     top: 10px;
