@@ -1,6 +1,7 @@
 import headMenu from './modules/header-menu';
 // import titlesOnSlider from './modules/main-slider';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
+import jquery from '../../node_modules/jquery';
 
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
@@ -35,4 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       // titlesOnSlider();
+
+      var container = document.querySelector('.gallery__wrapper');
+      var mixer = mixitup(container);
 });

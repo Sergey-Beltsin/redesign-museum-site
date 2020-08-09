@@ -1034,6 +1034,27 @@ body {
     width: 35%;
     left: -50px; } }
 
+.gallery__filter {
+  display: flex;
+  justify-content: center; }
+
+.gallery__filter__button {
+  color: #777777;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  transition: 0.2s ease-out; }
+  .gallery__filter__button:hover {
+    color: #f8b332;
+    cursor: pointer; }
+
+.gallery__wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+
+.gallery__image__wrapper {
+  width: 25%; }
+
 .main-slider {
   width: 100%;
   height: 100%;

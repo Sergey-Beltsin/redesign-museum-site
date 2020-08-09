@@ -1,0 +1,33 @@
+.gallery__filter {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__filter__button {
+    color: #777777;
+    font-size: 14px;
+
+    border: none;
+    background-color: transparent;
+
+    transition: 0.2s ease-out;
+
+    &:hover {
+        color: #f8b332;
+
+        cursor: pointer;
+    }
+}
+
+.gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery__image__wrapper {
+    width: 25%;
+}
+
+.gallery__image {
+    
+}
