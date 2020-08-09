@@ -7,7 +7,6 @@ import jquery from 'jquery';
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
     galleryButtons();
-    darkenedOnHover();
 
     tns({
         container: '.main-slider__slides',
