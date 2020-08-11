@@ -148,6 +148,7 @@ gulp.task('build', gulp.series(
     'sprite',
     'images',
     'html',
+    'style',
     'htmlimages',
     'minify',
     'minify-html',
