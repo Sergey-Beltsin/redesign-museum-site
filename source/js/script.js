@@ -2,11 +2,14 @@ import headMenu from './modules/header-menu';
 import galleryButtons from './modules/gallery-buttons';
 // import darkenedOnHover from './modules/gallery-image';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
+import mixitup from 'mixitup';
 import jquery from 'jquery';
 
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
     galleryButtons();
+
+    var mixer = mixitup('.gallery__wrapper');
 
     tns({
         container: '.main-slider__slides',
@@ -20,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // prevButton: `position: absolute;`
 
         // navPosition: 'bottom'
-      });
+    });
 
       tns({
         container: '.about-museum__slider',
@@ -35,10 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // prevButton: `position: absolute;`
 
         // navPosition: 'bottom'
-      });
+    });
 
       // titlesOnSlider();
-
-      var container = document.querySelector('.gallery__wrapper');
-      var mixer = mixitup(container);
 });

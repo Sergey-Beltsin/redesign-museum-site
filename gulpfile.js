@@ -1,19 +1,21 @@
-const gulp = require('gulp');
-const del = require('del');
-const sass = require('gulp-sass');
-const plumber = require('gulp-plumber');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
-const csso = require("gulp-csso");
-const htmlmin = require('gulp-htmlmin');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
-const posthtml = require('gulp-posthtml');
-const include = require('posthtml-include');
+const gulp = require('gulp'),
+      del = require('del'),
+      sass = require('gulp-sass'),
+      plumber = require('gulp-plumber'),
+      postcss = require('gulp-postcss'),
+      autoprefixer = require('autoprefixer'),
+      browserSync = require('browser-sync').create(),
+      csso = require("gulp-csso"),
+      htmlmin = require('gulp-htmlmin'),
+      uglify = require('gulp-uglify'),
+      rename = require('gulp-rename'),
+      imagemin = require('gulp-imagemin'),
+      imageminJpegtran = require('imagemin-jpegtran'),
+      imageminPngquant = require('imagemin-pngquant'),
+      webp = require('gulp-webp'),
+      svgstore = require('gulp-svgstore'),
+      posthtml = require('gulp-posthtml'),
+      include = require('posthtml-include');
 
 
 // Local server (gulp watch)
@@ -83,12 +85,12 @@ gulp.task('minify-js', function () {
 // Minify images/convert WebPack/build sprite
 
 gulp.task('images', function () {
-    return gulp.src('./img/**/*.{png,jpg,svg}')
+    return gulp.src('./source/img/**/*.{png,jpg,svg}')
         .pipe(imagemin([
-            imagemin.optipng({optimizationlevel: 3}),
-            imagemin.mozjpeg({progressive: true}),
-            imagemin.svgo()
-        ]))
+            imagemin.gifsicle({interlaced: true}),
+	        imagemin.mozjpeg({quality: 75, progressive: true}),
+	        imagemin.optipng({optimizationLevel: 5})
+	    ]))
     .pipe(gulp.dest('source/img'));
 });
 
@@ -115,15 +117,6 @@ gulp.task('html', function () {
         .pipe(gulp.dest('build'));
 });
 
-gulp.task('htmlimages', function () {
-    return gulp.src('source/*.html')
-        .pipe(posthtml([
-            include()
-        ]))
-        .pipe(rename('index.include.html'))
-        .pipe(gulp.dest('source'));
-});
-
 
 // Build
 
@@ -146,10 +139,8 @@ gulp.task('build', gulp.series(
     'clean',
     'copy',
     'sprite',
-    'images',
     'html',
     'style',
-    'htmlimages',
     'minify',
     'minify-html',
     'minify-css',
