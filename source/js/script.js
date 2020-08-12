@@ -1,5 +1,6 @@
 import headMenu from './modules/header-menu';
 import galleryButtons from './modules/gallery-buttons';
+import fixedDesktopMenu from './modules/fixed-menu';
 // import darkenedOnHover from './modules/gallery-image';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 import mixitup from 'mixitup';
@@ -8,6 +9,7 @@ import jquery from 'jquery';
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
     galleryButtons();
+    fixedDesktopMenu();
 
     var mixer = mixitup('.gallery__wrapper');
 
