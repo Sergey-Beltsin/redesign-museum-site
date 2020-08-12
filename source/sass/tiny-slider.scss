@@ -123,7 +123,8 @@
 
     & .tns-nav {
         flex-direction: column;
-        top: 49%;
+        top: auto;
+        bottom: -50%;
         left: 55%;
 
         & button {
@@ -216,13 +217,13 @@
 
         & button[data-controls='prev'] {
             &::before {
-                top: 11px;
+                top: 20px;
                 left: 7px;
                 transform: rotate(135deg);
             }
     
             &::after {
-                bottom: 11px;
+                bottom: 13px;
                 left: 7px;
                 transform: rotate(-135deg);
             }
@@ -247,15 +248,11 @@
 }
 
 @media (min-width: 500px) {
-    .tns-outer {
-        
-    }
-
-    #tns2-ow {
-        & .tns-nav {
-            left: 51%;
-        }
-    }
+    // #tns2-ow {
+    //     & .tns-nav {
+    //         // left: 51%;
+    //     }
+    // }
 }
 
 @media (min-width: 768px) {
@@ -264,10 +261,11 @@
         margin-top: -40px;
 
         & .tns-nav {
+            top: 45%;
         }
     }
 
     .tns-nav {
-        top: 130px;
+        top: 135px;
     }
 }

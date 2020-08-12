@@ -243,7 +243,8 @@ body {
   margin-top: -60px; }
   #tns2-ow .tns-nav {
     flex-direction: column;
-    top: 49%;
+    top: auto;
+    bottom: -50%;
     left: 55%; }
     #tns2-ow .tns-nav button {
       margin: 0;
@@ -293,11 +294,11 @@ body {
     .tns-controls button[data-controls='next']::before {
       width: 15px; }
   .tns-controls button[data-controls='prev']::before {
-    top: 11px;
+    top: 20px;
     left: 7px;
     transform: rotate(135deg); }
   .tns-controls button[data-controls='prev']::after {
-    bottom: 11px;
+    bottom: 13px;
     left: 7px;
     transform: rotate(-135deg); }
   .tns-controls button[data-controls='next'] {
@@ -311,16 +312,14 @@ body {
       left: 10px;
       transform: rotate(135deg); } }
 
-@media (min-width: 500px) {
-  #tns2-ow .tns-nav {
-    left: 51%; } }
-
 @media (min-width: 768px) {
   #tns2-ow {
     width: 70%;
     margin-top: -40px; }
+    #tns2-ow .tns-nav {
+      top: 45%; }
   .tns-nav {
-    top: 130px; } }
+    top: 135px; } }
 
 .page-header {
   background-color: #fafafa;
@@ -486,11 +485,12 @@ body {
     background-color: rgba(51, 51, 51, 0.5); }
   .main-nav__fix {
     display: block;
+    visibility: hidden;
     height: 50px;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 10;
     opacity: 0;
     background-color: #ffffff;
     border-bottom: 2px solid #e0e0e0;
@@ -498,20 +498,18 @@ body {
     -moz-box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.6);
     transition: all 0.5s ease-out; }
+  .main-nav__fix--fixed {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    animation: dropDownMenu;
+    animation-duration: 0.5s; }
   .main-nav__fix__wrapper {
     display: flex;
     justify-content: space-between;
     width: 95%;
     max-width: 1200px;
     margin: 0 auto; }
-  .main-nav__fix--fixed {
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    opacity: 1;
-    transition: all 0.5s ease-out;
-    animation: dropDownMenu;
-    animation-duration: 0.5s; }
   .main-nav__fix__list {
     display: flex;
     margin: 0;

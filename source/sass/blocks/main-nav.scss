@@ -208,12 +208,13 @@
 
     .main-nav__fix {
         display: block;
+        visibility: hidden;
         height: 50px;
         width: 100%;
 
         position: fixed;
         top: 0;
-        z-index: 3;
+        z-index: 10;
 
         opacity: 0;
         background-color: #ffffff;
@@ -225,6 +226,16 @@
         transition: all 0.5s ease-out;
     }
 
+    .main-nav__fix--fixed {
+        visibility: visible;
+
+        opacity: 1;
+
+        transition: all 0.5s ease-out;
+        animation: dropDownMenu;
+        animation-duration: 0.5s;
+    }
+
     .main-nav__fix__wrapper {
         display: flex;
         justify-content: space-between;
@@ -232,19 +243,6 @@
         width: 95%;
         max-width: 1200px;
         margin: 0 auto;
-    }
-
-    .main-nav__fix--fixed {
-        position: fixed;
-        top: 0;
-        z-index: 3;
-
-        opacity: 1;
-
-        transition: all 0.5s ease-out;
-
-        animation: dropDownMenu;
-        animation-duration: 0.5s;
     }
 
     .main-nav__fix__list {
