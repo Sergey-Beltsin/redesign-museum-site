@@ -1,0 +1,133 @@
+@import "../variables.scss";
+
+.main-footer__logo__wrapper {
+    width: 40%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-footer__list {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+
+    list-style: none;
+}
+
+.main-footer__title {
+    padding-left: 60px;
+
+    position: relative;
+
+    color: #ffffff;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        left: 0px;
+        top: 10px;
+
+        width: 45px;
+        height: 1px;
+
+        background-color: #e2b13c;
+    }
+}
+
+.main-footer__to-all {
+    display: block;
+    margin-bottom: 50px;
+
+    text-decoration: none;
+    color: rgb(214, 168, 40);
+
+    font-style: italic;
+    transition: 0.1s ease-out;
+
+    &:hover {
+        color: rgb(97, 97, 97);
+    }
+}
+
+.main-footer__arrow-icon {
+    position: relative;
+    top: 18px;
+}
+
+.main-footer__quick-links__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer__quick-links__item {
+    display: block;
+    margin-bottom: 15px;
+
+    color: #ababab;
+    text-decoration: none;
+
+    transition: 0.2s ease-out;
+
+    &:last-child {
+        margin-bottom: 40px;
+    }
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.main-footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer__contacts__icons {
+    color: #f8b332;
+}
+
+#icon-destination-footer path {
+    fill: #f8b332;
+}
+
+.main-footer__contacts__icons {
+    position: absolute;
+}
+
+.main-footer__contacts__item__wrapper {
+    margin-bottom: 15px;
+    padding-left: 40px;
+}
+
+@media (min-width: $tablet-width) {
+    .main-footer__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-footer__item {
+        flex-grow: 1;
+
+        &:first-child {
+            width: 45%;
+        }
+
+        &:nth-child(2) {
+            width: 50%;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .main-footer__item {
+        &:first-child {
+            width: 30%;
+        }
+
+        &:nth-child(2) {
+            width: auto;
+        }
+    }
+}

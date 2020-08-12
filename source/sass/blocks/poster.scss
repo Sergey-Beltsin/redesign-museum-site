@@ -274,14 +274,13 @@
 
     &:hover {
         background-color: #f8b332;
-        border-radius: 20px;
+        border-radius: 17px;
     }
 }
 
 @media (min-width: $tablet-width) {
     .poster-item {
         flex-direction: row;
-        // min-height: 550px;
     }
 
     .poster-item__text {
@@ -346,14 +345,6 @@
             padding-bottom: 0;
         }
     }
-
-    // .poster-item__image {
-    //     height: 80%;
-    // }
-
-    // .poster-item:nth-child(2) .poster-item__image {
-    //     height: 60%;
-    // }
 
     .poster-item__title__link {
         font-size: 16px;

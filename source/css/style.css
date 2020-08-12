@@ -345,6 +345,9 @@ body {
   background-color: #111111;
   transition-delay: 0.25s; }
 
+.main-nav__fix {
+  display: none; }
+
 .main-nav__wrapper {
   width: 95%;
   margin: 0 auto;
@@ -474,6 +477,58 @@ body {
     margin: 0 auto;
     position: relative;
     background-color: rgba(51, 51, 51, 0.5); }
+  .main-nav__fix {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0; }
+  .main-nav__fix__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto; }
+  .main-nav__fix__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none; }
+  .main-nav__fix__item:last-child {
+    padding-right: 0; }
+  .main-nav__fix__item__link {
+    height: 70px;
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    top: 15px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s ease-out; }
+    .main-nav__fix__item__link--active {
+      color: #ffffff;
+      background-color: #e2b13c;
+      border-bottom: none;
+      transition: 0.2s ease-out; }
+      .main-nav__fix__item__link--active:hover {
+        color: #ffffff; }
+    .main-nav__fix__item__link:hover {
+      color: #ffffff;
+      background-color: #e2b13c;
+      border-bottom: none; }
+  .main-nav__fix--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    opacity: 1;
+    transition: 0.5s ease-out; }
+  .main-nav__fix--hidden {
+    top: -70px;
+    opacity: 0; }
   .main-nav__list__wrapper {
     width: 100%;
     max-width: 1200px;
@@ -491,9 +546,10 @@ body {
     margin-right: 30px;
     opacity: 1; }
   .main-nav__item__link {
-    width: 100%;
     height: 100%;
-    padding-right: 16px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 6px;
     padding-bottom: 0;
     padding-top: 0;
     position: relative;
@@ -692,6 +748,7 @@ body {
 .about-museum__info {
   text-decoration: none;
   color: #d6a828;
+  font-style: italic;
   transition: 0.1s ease-out; }
   .about-museum__info:hover {
     color: #616161; }
@@ -907,7 +964,7 @@ body {
   transition: 0.2s ease-out; }
   .poster-item__to-all:hover {
     background-color: #f8b332;
-    border-radius: 13px; }
+    border-radius: 17px; }
 
 @media (min-width: 768px) {
   .poster-item {
@@ -1044,6 +1101,7 @@ body {
 .news__item__to-all {
   text-decoration: none;
   color: #d6a828;
+  font-style: italic;
   transition: 0.2s ease-out; }
   .news__item__to-all:hover {
     color: #616161; }
@@ -1216,9 +1274,10 @@ body {
     position: relative; } }
 
 .page-footer {
+  margin-top: 50px;
   padding-top: 30px;
-  padding-bottom: 50px;
-  background-color: #222222; }
+  background-color: #222222;
+  color: #ababab; }
 
 .page-footer__wrapper {
   width: 85%;
@@ -1259,3 +1318,147 @@ body {
   font-size: 16px;
   font-weight: normal;
   text-transform: uppercase; }
+
+.main-footer__logo__wrapper {
+  width: 40%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.main-footer__list {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 50px;
+  list-style: none; }
+
+.main-footer__title {
+  padding-left: 60px;
+  position: relative;
+  color: #ffffff; }
+  .main-footer__title::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 45px;
+    height: 1px;
+    background-color: #e2b13c; }
+
+.main-footer__to-all {
+  display: block;
+  margin-bottom: 50px;
+  text-decoration: none;
+  color: #d6a828;
+  font-style: italic;
+  transition: 0.1s ease-out; }
+  .main-footer__to-all:hover {
+    color: #616161; }
+
+.main-footer__arrow-icon {
+  position: relative;
+  top: 18px; }
+
+.main-footer__quick-links__wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.main-footer__quick-links__item {
+  display: block;
+  margin-bottom: 15px;
+  color: #ababab;
+  text-decoration: none;
+  transition: 0.2s ease-out; }
+  .main-footer__quick-links__item:last-child {
+    margin-bottom: 40px; }
+  .main-footer__quick-links__item:hover {
+    color: #ffffff; }
+
+.main-footer__contacts {
+  display: flex;
+  flex-direction: column; }
+
+.main-footer__contacts__icons {
+  color: #f8b332; }
+
+#icon-destination-footer path {
+  fill: #f8b332; }
+
+.main-footer__contacts__icons {
+  position: absolute; }
+
+.main-footer__contacts__item__wrapper {
+  margin-bottom: 15px;
+  padding-left: 40px; }
+
+@media (min-width: 768px) {
+  .main-footer__list {
+    display: flex;
+    flex-wrap: wrap; }
+  .main-footer__item {
+    flex-grow: 1; }
+    .main-footer__item:first-child {
+      width: 45%; }
+    .main-footer__item:nth-child(2) {
+      width: 50%;
+      margin-left: 20px; } }
+
+@media (min-width: 1200px) {
+  .main-footer__item:first-child {
+    width: 30%; }
+  .main-footer__item:nth-child(2) {
+    width: auto; } }
+
+.bottom-footer {
+  background-color: #161616;
+  color: #909090;
+  text-align: center; }
+
+.bottom-footer__wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.bottom-footer__social {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none; }
+
+.bottom-footer__social__item {
+  margin-right: 20px; }
+  .bottom-footer__social__item:last-child {
+    margin-right: 0; }
+
+.bottom-footer__social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: #444444;
+  border: solid 2px #575757;
+  border-radius: 100%;
+  transition: 0.2s ease-out; }
+  .bottom-footer__social__link:hover {
+    border-color: #f8b332;
+    color: #ffffff;
+    background-color: #f8b332; }
+
+.bottom-footer__social__icons--vk {
+  position: relative;
+  top: 13px;
+  right: 2px; }
+
+.bottom-footer__social__icons--facebook {
+  position: relative;
+  top: 6px;
+  left: 3px; }
+
+@media (min-width: 1200px) {
+  .bottom-footer__wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .bottom-footer__copyright {
+    width: 50%;
+    text-align: left; } }
