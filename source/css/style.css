@@ -645,12 +645,6 @@ body {
   position: relative;
   top: 10px; }
 
-#icon-vk path {
-  color: #aaaaaa; }
-
-#icon-vk:hover {
-  color: #f8b332; }
-
 .contacts__logo {
   width: 65%;
   max-width: 1200px;
@@ -718,7 +712,7 @@ body {
     margin-right: 15px; }
   .contacts__user-wrapper {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-around; }
   .contacts__location,
   .contacts__time {
     display: flex;
