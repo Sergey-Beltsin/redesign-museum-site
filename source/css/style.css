@@ -629,10 +629,11 @@ body {
 
 .contacts__social__link {
   text-decoration: none;
-  color: #aaaaaa;
+  color: #ffffff;
+  opacity: 0.6;
   transition: 0.2s ease-out; }
   .contacts__social__link:hover {
-    color: #f8b332; }
+    opacity: 0.2; }
 
 .contacts__social__link--vk {
   transition: 0.2s ease-out;
@@ -1539,13 +1540,14 @@ body {
   display: block;
   width: 40px;
   height: 40px;
-  color: #444444;
+  color: #ffffff;
+  opacity: 0.3;
   border: solid 2px #575757;
   border-radius: 100%;
   transition: 0.2s ease-out; }
   .bottom-footer__social__link:hover {
+    opacity: 1;
     border-color: #f8b332;
-    color: #ffffff;
     background-color: #f8b332; }
 
 .bottom-footer__social__icons--vk {
