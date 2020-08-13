@@ -200,47 +200,49 @@
 }
 
 @media (max-width: 500px) {
-    .tns-controls {
-        & button[data-controls='prev'],
-        & button[data-controls='next'] {
-            width: 30px;
-            height: 35px;
+    #tns2-ow {
+        .tns-controls {
+            & button[data-controls='prev'],
+            & button[data-controls='next'] {
+                width: 30px;
+                height: 35px;
 
-            bottom: 35%;
+                // bottom: 35%;
 
-            &::after,
-            &::before {
-                width: 15px;
+                &::after,
+                &::before {
+                    width: 15px;
+                }
             }
-        }
 
-        & button[data-controls='prev'] {
-            &::before {
-                top: 12px;
-                left: 7px;
-                transform: rotate(135deg);
+            & button[data-controls='prev'] {
+                &::before {
+                    top: 12px;
+                    left: 7px;
+                    transform: rotate(135deg);
+                }
+        
+                &::after {
+                    bottom: 12px;
+                    left: 7px;
+                    transform: rotate(-135deg);
+                }
             }
-    
-            &::after {
-                bottom: 12px;
-                left: 7px;
-                transform: rotate(-135deg);
-            }
-        }
-    
-        & button[data-controls='next'] {
-            right: 0;
-    
-            &::before {
-                top: 12px;
-                left: 10px;
-                transform: rotate(-135deg);
-            }
-    
-            &::after {
-                bottom: 12px;
-                left: 10px;
-                transform: rotate(135deg);
+        
+            & button[data-controls='next'] {
+                // right: 0;
+        
+                &::before {
+                    top: 12px;
+                    left: 10px;
+                    transform: rotate(-135deg);
+                }
+        
+                &::after {
+                    bottom: 12px;
+                    left: 10px;
+                    transform: rotate(135deg);
+                }
             }
         }
     }

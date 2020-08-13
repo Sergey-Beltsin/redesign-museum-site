@@ -283,33 +283,30 @@ body {
     top: 90px; } }
 
 @media (max-width: 500px) {
-  .tns-controls button[data-controls='prev'],
-  .tns-controls button[data-controls='next'] {
+  #tns2-ow .tns-controls button[data-controls='prev'],
+  #tns2-ow .tns-controls button[data-controls='next'] {
     width: 30px;
-    height: 35px;
-    bottom: 35%; }
-    .tns-controls button[data-controls='prev']::after, .tns-controls button[data-controls='prev']::before,
-    .tns-controls button[data-controls='next']::after,
-    .tns-controls button[data-controls='next']::before {
+    height: 35px; }
+    #tns2-ow .tns-controls button[data-controls='prev']::after, #tns2-ow .tns-controls button[data-controls='prev']::before,
+    #tns2-ow .tns-controls button[data-controls='next']::after,
+    #tns2-ow .tns-controls button[data-controls='next']::before {
       width: 15px; }
-  .tns-controls button[data-controls='prev']::before {
+  #tns2-ow .tns-controls button[data-controls='prev']::before {
     top: 12px;
     left: 7px;
     transform: rotate(135deg); }
-  .tns-controls button[data-controls='prev']::after {
+  #tns2-ow .tns-controls button[data-controls='prev']::after {
     bottom: 12px;
     left: 7px;
     transform: rotate(-135deg); }
-  .tns-controls button[data-controls='next'] {
-    right: 0; }
-    .tns-controls button[data-controls='next']::before {
-      top: 12px;
-      left: 10px;
-      transform: rotate(-135deg); }
-    .tns-controls button[data-controls='next']::after {
-      bottom: 12px;
-      left: 10px;
-      transform: rotate(135deg); } }
+  #tns2-ow .tns-controls button[data-controls='next']::before {
+    top: 12px;
+    left: 10px;
+    transform: rotate(-135deg); }
+  #tns2-ow .tns-controls button[data-controls='next']::after {
+    bottom: 12px;
+    left: 10px;
+    transform: rotate(135deg); } }
 
 @media (min-width: 500px) {
   #tns2-ow .tns-nav {
