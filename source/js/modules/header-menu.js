@@ -32,23 +32,3 @@ function headMenu() {
 }
 
 export default headMenu;
-
-
-// window.addEventListener('scroll', () => {
-//     if (window.scrollY > 600) {
-//         mainNav.classList.add('main-nav--scrolled');
-//     } else {
-//         mainNav.classList.remove('main-nav--scrolled');
-//     }
-
-//     btn.addEventListener('click', () => {
-//         // if (mainNav.classList.contains('main-nav--scrolled-active')) {
-//         //     mainNav.classList.remove('main-nav--scrolled-active');
-//         // }
-//         if (!mainNav.classList.contains('main-nav--scrolled-active') && mainNav.classList.contains('main-nav--opened') && window.scrollY > 600) {
-//             mainNav.classList.add('main-nav--scrolled-active');
-//         } else if (mainNav.classList.contains('main-nav--scrolled-active') && window.scrollY < 600) {
-//             mainNav.classList.remove('main-nav--scrolled-active');
-//         }
-//     });
-// });

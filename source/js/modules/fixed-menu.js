@@ -3,10 +3,8 @@ function fixedDesktopMenu() {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 500 && window.innerWidth > 1000 && !menu.classList.contains('main-nav__fix--fixed')) {
-            // menu.classList.remove('main-nav__fix--hidden');
             menu.classList.add('main-nav__fix--fixed');
         } else if (window.scrollY < 500 || window.innerWidth < 1000) {
-            // menu.classList.add('main-nav__fix--hidden');
             menu.classList.remove('main-nav__fix--fixed');
         }
     });

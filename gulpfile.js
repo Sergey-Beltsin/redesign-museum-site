@@ -52,6 +52,13 @@ gulp.task('minify-css', function () {
         .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('min-css', function () {
+    return gulp.src('source/css/style.css')
+        .pipe(csso())
+        .pipe(rename('style.min.css'))
+        .pipe(gulp.dest('source/css'));
+});
+
 gulp.task('minify', function () {
     return gulp.src('source/*.html')
         .pipe(htmlmin({
@@ -144,5 +151,6 @@ gulp.task('build', gulp.series(
     'minify',
     'minify-html',
     'minify-css',
-    'minify-js'
+    'minify-js',
+    'min-css'
 ));

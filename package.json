@@ -9,12 +9,14 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "core-js": "^3.6.5",
+    "fontfaceobserver": "^2.1.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.0",
     "imagemin-svgo": "^8.0.0",
     "jquery": "^3.5.1",
+    "lazysizes": "^5.2.2",
     "slick-carousel": "^1.8.1",
     "svgstore": "^3.0.0-2",
     "tiny-slider": "^2.9.3"

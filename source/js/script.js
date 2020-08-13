@@ -2,10 +2,11 @@ import headMenu from './modules/header-menu';
 import galleryButtons from './modules/gallery-buttons';
 import fixedDesktopMenu from './modules/fixed-menu';
 import smoothScroll from './modules/smooth-scroll-to-anchors';
-// import darkenedOnHover from './modules/gallery-image';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 import mixitup from 'mixitup';
 import jquery from 'jquery';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 window.addEventListener('DOMContentLoaded', () => {
     headMenu();
@@ -23,9 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         controlsPosition: 'bottom',
         controlsText: [' ', ' '],
-        // prevButton: `position: absolute;`
-
-        // navPosition: 'bottom'
     });
 
       tns({
@@ -38,12 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         controlsPosition: 'bottom',
         controlsText: [' ', ' ']
-        // prevButton: `position: absolute;`
-
-        // navPosition: 'bottom'
     });
 
     smoothScroll();
-
-      // titlesOnSlider();
 });
