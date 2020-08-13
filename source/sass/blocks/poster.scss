@@ -1,5 +1,14 @@
 @import "../variables.scss";
 
+#poster::before {
+    content: '';
+    
+    display: block;
+    height:      75px;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
 .poster {
     margin-bottom: 150px;
 }
@@ -11,9 +20,27 @@
 }
 
 .poster__main-title {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    position: relative;
+
     font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    text-align: center;
+
+    &::after {
+        content: '';
+    
+        position: absolute;
+        bottom: -10px;
+        left: 32px;
+    
+        width: 140px;
+        height: 3px;
+    
+        background: linear-gradient(90deg, rgba(248, 179, 50, 1) 0%, rgba(255, 64, 0, 1) 100%);
+    }
 }
 
 .poster__list {

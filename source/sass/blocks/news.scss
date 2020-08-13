@@ -1,107 +1,41 @@
 @import "../variables.scss";
 
-// .news {
-//     width: 85%;
-//     max-width: 1200px;
-//     margin: 0 auto;
-// }
-
-// .news__main-title {
-//     text-align: center;
-//     font-size: 32px;
-// }
-
-// .news__main-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// .news__wrapper {
-//     display: flex;
-//     flex-direction: column;
-//     overflow: hidden;
-//     flex-grow: 1;
-
-//     width: 100%;
-//     min-width: 200px;
-//     margin-right: 20px;
-//     margin-bottom: 40px;
-
-//     &:last-child {
-//         margin-right: 0;
-//         margin-bottom: 0;
-//     }
-// }
-
-// .news__link:hover .news__image {
-//     opacity: 0.6;
-// }
-
-// .news__link:hover .news__title {
-//     opacity: 0.6;
-// }
-
-// .news__link__wrapper {
-//     height: 200px;
-// }
-
-// .news__image {
-//     display: block;
-//     margin: 0 auto;
-
-//     transition: 0.2s ease-out;
-
-//     &:hover {
-//         opacity: 0.6;
-//     }
-// }
-
-// .news__image:hover .news__title:hover {
-//     opacity: 0.7;
-// }
-
-// .news__title {
-//     display: flex;
-//     align-items: center;
-//     padding: 10px;
-//     height: 100px;
-
-//     text-decoration: none;
-//     font-weight: bold;
-//     font-size: 18px;
-//     // text-align: center;
-//     color: #000000;
-
-//     &:hover {
-//         opacity: 0.7;
-//     }
-// }
-
-// .news__description {
-//     padding: 0 10px;
-
-//     // text-align: center;
-// }
-
-// @media (min-width: 550px) {
-//     .news__wrapper {
-//         width: 40%;
-//     }
-// }
-
-// @media (min-width: $desktop-width) {
-//     .news__wrapper {
-//         width: 30%;
-//     }
-// }
+#news::before {
+    content: '';
+    
+    display: block;
+    height:      75px;
+    margin-top: -50px;
+    visibility: hidden;
+}
 
 .news__wrapper {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.news__main-title {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    position: relative;
+
+    text-align: center;
+
+    &::after {
+        content: '';
+    
+        position: absolute;
+        bottom: -10px;
+        left: 32px;
+    
+        width: 140px;
+        height: 3px;
+    
+        background: linear-gradient(90deg, rgba(248, 179, 50, 1) 0%, rgba(255, 64, 0, 1) 100%);
+    }
 }
 
 .news__list {

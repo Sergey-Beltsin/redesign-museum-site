@@ -1,5 +1,14 @@
 @import "../variables.scss";
 
+#gallery::before {
+    content: '';
+    
+    display: block;
+    height:      75px;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
 .gallery__filter {
     width: 90%;
     max-width: 1200px;
@@ -58,6 +67,29 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.gallery__main-title {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    position: relative;
+
+    text-align: center;
+
+    &::after {
+        content: '';
+    
+        position: absolute;
+        bottom: -10px;
+        left: 32px;
+    
+        width: 140px;
+        height: 3px;
+    
+        background: linear-gradient(90deg, rgba(248, 179, 50, 1) 0%, rgba(255, 64, 0, 1) 100%);
+    }
 }
 
 .gallery__image__wrapper {

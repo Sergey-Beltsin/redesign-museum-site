@@ -1,6 +1,7 @@
 import headMenu from './modules/header-menu';
 import galleryButtons from './modules/gallery-buttons';
 import fixedDesktopMenu from './modules/fixed-menu';
+import smoothScroll from './modules/smooth-scroll-to-anchors';
 // import darkenedOnHover from './modules/gallery-image';
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
 import mixitup from 'mixitup';
@@ -41,6 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // navPosition: 'bottom'
     });
+
+    smoothScroll();
 
       // titlesOnSlider();
 });

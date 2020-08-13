@@ -1,8 +1,12 @@
 @import "../variables.scss";
 
-.about-museum {
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 40px;
+#about-museum::before {
+    content: '';
+    
+    display: block;
+    height:      75px;
+    margin-top: -50px;
+    visibility: hidden;
 }
 
 .about-museum__main-wrapper {
@@ -23,11 +27,38 @@
     margin: 0;
 }
 
+.about-museum__title__wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
 .about-museum__title {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
     margin-top: 30px;
-    margin-bottom: 10px;
+
+    position: relative;
 
     font-size: 32px;
+    text-align: center;
+
+    &::after {
+        content: '';
+    
+        position: absolute;
+        bottom: -10px;
+        left: 32px;
+    
+        width: 140px;
+        height: 3px;
+    
+        background: linear-gradient(90deg, rgba(248, 179, 50, 1) 0%, rgba(255, 64, 0, 1) 100%);
+    }
+}
+
+.about-museum__description {
+    margin-top: 30px;
 }
 
 .about-museum__image__wrapper {
