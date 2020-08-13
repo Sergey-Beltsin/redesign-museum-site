@@ -20,7 +20,7 @@
     margin: 0 auto;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     padding-top: 10px;
@@ -40,7 +40,6 @@
 }
 
 .contacts__phone {
-    margin-right: 10%;
 }
 
 .contacts__social__list {
@@ -71,14 +70,6 @@
     }
 }
 
-// .contacts__social__link path {
-//     fill: #aaaaaa;
-// }
-
-// .contacts__social__link:hover path {
-//     fill: #f8b332;
-// }
-
 .contacts__social__link--vk {
     transition: 0.2s ease-out;
 
@@ -88,20 +79,6 @@
         color: #f8b332;
     }
 }
-
-// #icon-vk {
-//     // transition: 0.2s ease-out;
-
-//     path {
-//         fill: #aaaaaa;
-//     }
-
-// //     &:hover {
-// //         path {
-// //             fill: #f8b332;
-// //         }
-// //     }
-// }
 
 .contacts__icons {
     position: relative;
