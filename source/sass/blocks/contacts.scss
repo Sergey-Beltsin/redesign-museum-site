@@ -39,9 +39,6 @@
     }
 }
 
-.contacts__phone {
-}
-
 .contacts__social__list {
     @include reset-list;
     display: flex;
@@ -167,7 +164,7 @@
 
     .contacts__social__list {
         position: relative;
-        top: 12px;
+        top: 20px;
     }
 
     .contacts__social__item {
